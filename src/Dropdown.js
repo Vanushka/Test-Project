@@ -1,21 +1,22 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
 
 class Dropdown extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { isOpened: false };
+    this.state = { isOpened: false }
   }
 
   toggleState() {
-    this.setState({ isOpened: !this.state.isOpened });
+    this.setState({ isOpened: !this.state.isOpened })
   }
   render() {
-    console.log( 'isOpened',  this.state.isOpened );
-    return
-    <div onClick={this.toggleState}>
+    console.log( 'isOpened',  this.state.isOpened )
+    return (
+    <div onClick={this.toggleState.bind(this)}>
       Its dropdown baby
-    </div>;
+    </div>
+    )
   }
 }
 
